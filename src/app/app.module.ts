@@ -10,12 +10,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Imports of used components 
-import { 
-  MatButtonModule,
-  MatInputModule,
-  MatCardModule,
-  MatToolbarModule
-} from '@angular/material';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   imports:      [ 
@@ -23,10 +18,11 @@ import {
     FormsModule,
     CommonModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatInputModule,
-    MatCardModule,
-    MatToolbarModule ],
+    MatButtonModule
+    ],
+    exports: [
+      MatButtonModule
+    ],
   declarations: [ AppComponent, HelloComponent ],
   bootstrap:    [ AppComponent ]
 })
